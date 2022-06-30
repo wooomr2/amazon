@@ -33,8 +33,8 @@ export const firebasePermission = {
   client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xlmmg%40clone-7d5ee.iam.gserviceaccount.com"
 }
 
-const app = !admin.apps.length
-  ? admin.initializeApp({
-      credential: admin.credential.cert(firebasePermission),
-    })
-  : admin.app();
+// const app = !admin.apps.length
+//   ? admin.initializeApp({
+//       credential: admin.credential.cert(firebasePermission),
+//     })
+//   : admin.app();

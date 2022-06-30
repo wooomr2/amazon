@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import * as admin from "firebase-admin";
 
 const firebaseConfig = {
   apiKey:  process.env.NEXT_PUBLIC_FIREBASE_API,
@@ -31,3 +32,9 @@ export const firebasePermission = {
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xlmmg%40clone-7d5ee.iam.gserviceaccount.com"
 }
+
+const app = !admin.apps.length
+  ? admin.initializeApp({
+      credential: admin.credential.cert(firebasePermission),
+    })
+  : admin.app();

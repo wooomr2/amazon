@@ -1,13 +1,13 @@
-import * as admin from "firebase-admin";
+// import * as admin from "firebase-admin";
 import { buffer } from "micro";
 
 //Secure a connection to firebase from backend
-const { firebasePermission } = require("../../../permission.json");
-const app = !admin.apps.length
-  ? admin.initializeApp({
-      credential: admin.credential.cert(firebasePermission),
-    })
-  : admin.app();
+// const { firebasePermission } = require("../../../permission.json");
+// const app = !admin.apps.length
+//   ? admin.initializeApp({
+//       credential: admin.credential.cert(firebasePermission),
+//     })
+//   : admin.app();
 
 //Establish connection to Stripe
 const stripe = require("stripe")(process.env.STRIPE_SECREY_KEY);

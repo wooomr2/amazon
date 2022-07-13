@@ -1,11 +1,17 @@
-# Deploy 주소
+## Deploy 주소
 https://amazon-wooomr2.vercel.app
 
-# Next.js tailwind-css stripe 
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## Stripe, StripeCLI, Webhook
+stripeCLI 구동 후 Access granted 된 후에 data Access 가능 
+--> firebaseAdmin과 결제정보 연동
 
-# stripeCLI
-- stripeCLI 구동 후 Access granted 된 후에 결제정보 받을 수 있음
-- ./stripe login
-- stripe listen --forward-to localhost:3000/api/webhook
+./stripe login
 
-- vercel 결제연동 시 timeout 걸려서 사용안하는 중
+stripe listen --forward-to localhost:3000/api/webhook
+
+vercel 결제연동 시 timeout 걸려서 사용 중단
